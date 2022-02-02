@@ -20,7 +20,7 @@ export const ResturentInfoComponentCard = ({ resturent = {} }) => {
     let isOpen = Math.random() >= 0.5;
 
     const {
-        name = 'Tata Motorssss',
+        name = 'Music Cafe',
         icon = 'abc',
         photos = [
             'https://www.outlookindia.com/outlooktraveller//public/uploads/2017/07/OSIX-Co-MOSAIC-Random-1.jpg'

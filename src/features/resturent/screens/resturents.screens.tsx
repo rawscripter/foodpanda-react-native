@@ -3,6 +3,8 @@ import { StatusBar, SafeAreaView, View, FlatList } from "react-native";
 import { Searchbar } from 'react-native-paper';
 import { ResturentInfoComponentCard } from '../components/resturent-info-card.component';
 import styled from 'styled-components/native';
+import Ionicons from 'react-native-vector-icons/Ionicons';
+
 
 const SearchView = styled(View)`
         padding: ${(props) => props.theme.space[3]};
@@ -24,12 +26,13 @@ const ResuturentList = styled(FlatList).attrs({
 
 
 
-export const ResturentScreen = () => {
+export const ResturentScreen = ({ navigation }) => {
+    navigation.setOptions({ headerShown: false });
     return (
         <>
             <SafeContainer >
                 <SearchView >
-                    <Searchbar />
+                    <Searchbar placeholder="Search your favourite resturents" />
                 </SearchView>
                 <ResuturentList
                     data={[
